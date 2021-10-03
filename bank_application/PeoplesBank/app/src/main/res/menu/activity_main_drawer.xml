@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/md_group7"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/ic_launcher"
+            android:title="home"/>
+
+        <item
+            android:id="@+id/nav_abaout_us"
+            android:icon="@mipmap/ic_launcher"
+            android:title="about us"/>
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@mipmap/ic_launcher"
+            android:title="contact us"/>
+
+<!--        <item-->
+<!--            android:id="@+id/nav_broadband"-->
+<!--            android:icon="@mipmap/ic_broadband"-->
+<!--            android:title="@string/nav_items_broadband"-->
+<!--            android:visible="false"/>-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_eBill"-->
+<!--            android:icon="@mipmap/ic_ebill"-->
+<!--            android:title="Bill"/>-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_payNow"-->
+<!--            android:icon="@mipmap/ic_paynow"-->
+            android:title="@string/nav_items_pay_now"/>
+
+
+
+    </group>
+
+</menu>
