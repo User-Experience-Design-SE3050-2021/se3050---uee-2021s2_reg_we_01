@@ -12,7 +12,7 @@
         />
     <item
         android:id="@+id/nav_transactionIcon"
-        android:title="Calculator"
+        android:title="Transaction"
         android:icon="@drawable/transaction"
         />
 

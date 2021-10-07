@@ -4,10 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 
 import androidx.fragment.app.Fragment;
 
+import com.alpha.peoplesbank.MainActivity;
 import com.alpha.peoplesbank.R;
+import com.alpha.peoplesbank.Util.SliderAdapterExample;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,12 +22,15 @@ import com.alpha.peoplesbank.R;
  */
 public class HomeFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    View rootView;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+
+    public SliderView sliderView;
+    public SliderAdapterExample sliderAdapter;
+    public String[] addImagesArray = {};
+
     private String mParam1;
     private String mParam2;
 
@@ -29,15 +38,6 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -56,10 +56,37 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    public void initialize(){
+
+        sliderView = rootView.findViewById(R.id.imageSlider);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        setHasOptionsMenu(true);
+
+        initialize();
+
+        return rootView;
+    }
+
+
+    public void setImagesToImageSlider() {
+
+        sliderAdapter = new SliderAdapterExample(getContext(), addImagesArray);
+        sliderView.setSliderAdapter(sliderAdapter);
+
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        sliderView.setIndicatorSelectedColor(getResources().getColor(R.color.accent_white));
+        sliderView.setIndicatorUnselectedColor(getResources().getColor(R.color.white));
+        sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
+        sliderView.startAutoCycle();
     }
 }

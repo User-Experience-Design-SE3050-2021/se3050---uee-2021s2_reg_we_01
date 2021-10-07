@@ -8,6 +8,7 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -20,8 +21,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alpha.peoplesbank.Util.SliderAdapterExample;
+import com.alpha.peoplesbank.fragment.FundTransferFragment;
 import com.alpha.peoplesbank.fragment.HomeFragment;
 import com.alpha.peoplesbank.fragment.SecondFragment;
+import com.alpha.peoplesbank.fragment.TransactionFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -38,9 +41,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     public int selectedBottomNav;
     private Fragment fragment = null;
 
-    public SliderView sliderView;
-    public SliderAdapterExample sliderAdapter;
-    public String[] addImagesArray = {};
 
 
     @Override
@@ -79,16 +79,13 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         navHeaderView = navigationView.getHeaderView(0);
 
-        bottomMenu();
-
-        NavController navController = Navigation.findNavController(this,R.id.navHostFragment);
-        NavigationUI.setupWithNavController(navigationView, navController);
 
         ivProfile1 = navHeaderView.findViewById(R.id.civ_profileImage);
         tvTitle = navHeaderView.findViewById(R.id.tv_navHeaderTitle);
         tvUserName  = navHeaderView.findViewById(R.id.tv_navHeaderUsername);
-        sliderView = findViewById(R.id.imageSlider);
+        bottomMenu();
 
+        loadFragment(new HomeFragment());
     }
 
 
@@ -110,40 +107,39 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     private void bottomMenu(){
 
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-            selectedBottomNav = item.getItemId();
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-            switch (item.getItemId()){
-                case R.id.nav_home:
-                    fragment = new HomeFragment();
-                    break;
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        loadFragment(new HomeFragment());
+                        break;
+                    case R.id.nav_calculator:
+                        loadFragment(new SecondFragment());
+                        break;
+                    case R.id.nav_transactionIcon:
+                        loadFragment(new TransactionFragment());
+                        break;
 
-                case R.id.nav_calculator:
-                    fragment = new SecondFragment();
-                    break;
-
-
+                    case R.id.nav_payment:
+                        loadFragment(new FundTransferFragment());
+                        break;
+                }
+                return true;
             }
-
-            if(fragment != null){
-                getSupportFragmentManager().beginTransaction().replace(R.id.navHostFragment, fragment).commit();
-            }
-
-            return true;
         });
+
+
+        bottomNavigationView.getMenu().getItem(2).setChecked(true);
     }
 
-    public void setImagesToImageSlider() {
 
-        sliderAdapter = new SliderAdapterExample(MainActivity.this, addImagesArray);
-        sliderView.setSliderAdapter(sliderAdapter);
 
-        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-        sliderView.setIndicatorSelectedColor(getResources().getColor(R.color.accent_white));
-        sliderView.setIndicatorUnselectedColor(getResources().getColor(R.color.white));
-        sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
-        sliderView.startAutoCycle();
+    public void loadFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_container, fragment);
+        transaction.commit();
     }
 }

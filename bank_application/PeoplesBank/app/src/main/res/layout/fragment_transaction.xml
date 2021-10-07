@@ -6,13 +6,13 @@
     tools:context=".fragment.TransactionFragment">
 
    <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
+       android:layout_width="360dp"
+       android:layout_height="560dp"
        android:background="@drawable/white_box"
        android:layout_marginStart="27dp"
-      android:layout_marginEnd="27dp"
+       android:layout_marginEnd="27dp"
        android:orientation="vertical"
-      android:layout_gravity="center">
+       android:layout_gravity="center">
 
 
       <View
@@ -216,5 +216,5 @@
 
 
 
-   </LinearLayout>
+</LinearLayout>
 
