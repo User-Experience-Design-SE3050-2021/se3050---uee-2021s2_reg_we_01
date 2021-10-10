@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                         loadFragment(new HomeFragment());
                         break;
                     case R.id.nav_calculator:
-                        loadFragment(new SecondFragment());
+                        loadFragment(new FundTransferFragment());
                         break;
                     case R.id.nav_transactionIcon:
                         loadFragment(new TransactionFragment());
