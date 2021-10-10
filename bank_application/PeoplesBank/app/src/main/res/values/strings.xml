@@ -11,6 +11,11 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+   <string name="paymentService">Payment Service</string>
+    <string name="oneTimeBillPayment">One Time Bill Payment</string>
+    <string name="favouriteBillPayment">Favourite Bill Payment</string>
+    <string name="manageFavouriteBills">Manage Favourite Bills</string>
+    <string name="billPaymentHistory">Bill Payment History</string>
+    <string name="loanPayment">Loan Payment </string>
+    <string name="creditCardPayment">Credit Card Service</string>
 </resources>
