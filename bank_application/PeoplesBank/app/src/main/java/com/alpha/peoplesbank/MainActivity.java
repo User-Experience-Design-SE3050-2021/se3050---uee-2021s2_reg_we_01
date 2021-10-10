@@ -25,6 +25,7 @@ import com.alpha.peoplesbank.fragment.FundTransferFragment;
 import com.alpha.peoplesbank.fragment.HomeFragment;
 import com.alpha.peoplesbank.fragment.SecondFragment;
 import com.alpha.peoplesbank.fragment.TransactionFragment;
+import com.alpha.peoplesbank.fragment.UserProfile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -123,8 +124,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                         loadFragment(new TransactionFragment());
                         break;
 
-                    case R.id.nav_payment:
-                        loadFragment(new FundTransferFragment());
+                    case R.id.nav_profile:
+                        loadFragment(new UserProfile());
                         break;
                 }
                 return true;
