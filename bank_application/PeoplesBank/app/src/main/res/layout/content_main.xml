@@ -174,15 +174,15 @@
             android:layout_height="match_parent"/>
 
         <Button
+            android:id="@+id/content_payment"
             android:layout_width="100dp"
             android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/home_custom_button_red"
             android:text="Payment"
             android:textSize="9sp"
             android:textStyle="bold"
-            app:backgroundTint="@color/gold_yellow"
-            android:background="@drawable/home_custom_button_red"
-            android:layout_gravity="center"
-            />
+            app:backgroundTint="@color/gold_yellow" />
 
 
 
