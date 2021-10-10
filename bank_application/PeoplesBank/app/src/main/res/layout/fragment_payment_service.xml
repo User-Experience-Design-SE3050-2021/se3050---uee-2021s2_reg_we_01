@@ -73,6 +73,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="@string/oneTimeBillPayment"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold" />
@@ -125,6 +126,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="@string/favouriteBillPayment"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold" />
@@ -179,6 +181,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="@string/manageFavouriteBills"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold" />
@@ -232,6 +235,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="@string/billPaymentHistory"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold" />
@@ -282,6 +286,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="@string/loanPayment"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold" />
@@ -332,6 +337,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="@string/creditCardPayment"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold" />
