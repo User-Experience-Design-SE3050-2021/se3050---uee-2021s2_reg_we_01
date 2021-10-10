@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PeoplesBank">
         <activity android:name=".registration_1"></activity>
-        <activity android:name=".fund_transfer_1" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:elevation="3dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:background="@drawable/white_box"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:padding="0dp"
+            android:src="@drawable/logo"
+            android:visibility="visible" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:text="A 6 digit code has been sent to"
+            android:gravity="center_horizontal|center_vertical"
+            android:maxLines="2"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:orientation="horizontal"
+            android:weightSum="115">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/et_pin1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="*"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textColor2"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:imeOptions="actionNext"
+                android:background="@drawable/bg_otp_edit_tab"
+                android:elevation="4dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"/>
+
+            <EditText
+                android:id="@+id/et_pin2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="*"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textColor2"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:imeOptions="actionNext"
+                android:background="@drawable/bg_otp_edit_tab"
+                android:elevation="4dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"/>
+
+            <EditText
+                android:id="@+id/et_pin3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="*"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textColor2"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:imeOptions="actionNext"
+                android:background="@drawable/bg_otp_edit_tab"
+                android:elevation="4dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"/>
+
+            <EditText
+                android:id="@+id/et_pin4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="*"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textColor2"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:imeOptions="actionDone"
+                android:background="@drawable/bg_otp_edit_tab"
+                android:elevation="4dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"/>
+
+            <EditText
+                android:id="@+id/et_pin5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="*"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textColor2"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:imeOptions="actionNext"
+                android:background="@drawable/bg_otp_edit_tab"
+                android:elevation="4dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"/>
+
+            <EditText
+                android:id="@+id/et_pin6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="*"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textColor2"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:imeOptions="actionNext"
+                android:background="@drawable/bg_otp_edit_tab"
+                android:elevation="4dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_resend"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="Resend"
+            android:textSize="12sp"
+           android:layout_marginRight="0dp"
+            android:layout_marginLeft="300dp"
+            android:textColor="@color/gold_yellow"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="30"
+                style="@style/AppButton_Done"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@color/black"
+                android:text="Verify"
+                android:textSize="18dp"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textAllCaps="false"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="24"/>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
