@@ -7,12 +7,12 @@
     <item
         android:id="@+id/nav_payment"
         android:icon="@drawable/payment"
-        android:title="Locate"
+        android:title="payment"
 
         />
     <item
         android:id="@+id/nav_transactionIcon"
-        android:title="Calculator"
+        android:title="Transaction"
         android:icon="@drawable/transaction"
         />
 
@@ -25,13 +25,13 @@
     <item
         android:id="@+id/nav_calculator"
         android:icon="@drawable/calculator"
-        android:title="home"
+        android:title="calculator"
         />
 
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/user"
-        android:title="home"
+        android:title="profile"
         />
 
 
