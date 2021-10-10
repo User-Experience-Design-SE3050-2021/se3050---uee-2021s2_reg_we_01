@@ -13,9 +13,10 @@ import com.alpha.peoplesbank.R;
 
 public class PaymentService extends Fragment {
 
-    private LinearLayout oneTimeBillPay;
+    private LinearLayout oneTimeBillPay,billHistory;
     private View view;
     private OneTimeBillPayment oneTimeBillPayment = new OneTimeBillPayment();
+    private PaymentHistory paymentHistory = new PaymentHistory();
 
     public PaymentService() {
 
@@ -29,10 +30,17 @@ public class PaymentService extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_payment_service, container, false);
         oneTimeBillPay = view.findViewById(R.id.one_time_bill_pay);
+        billHistory = view.findViewById(R.id.bill_pay_history);
         oneTimeBillPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, oneTimeBillPayment).commit();
+            }
+        });
+        billHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, paymentHistory).commit();
             }
         });
         return view;
