@@ -128,6 +128,8 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
                     case R.id.nav_payment:
                         loadFragment(new PaymentService());
+
+                
                         break;
                 }
                 return true;

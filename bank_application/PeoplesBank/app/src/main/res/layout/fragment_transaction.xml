@@ -5,8 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".fragment.TransactionFragment">
 
+
+
    <LinearLayout
-       android:layout_width="360dp"
+       android:layout_width="match_parent"
        android:layout_height="560dp"
        android:background="@drawable/white_box"
        android:layout_marginStart="27dp"
@@ -62,7 +64,7 @@
                <ImageView
                    android:layout_width="60dp"
                    android:layout_height="60dp"
-                   android:background="@drawable/money_transfer"/>
+                   android:background="@drawable/money_transfer" />
 
 
 
@@ -116,7 +118,7 @@
                <ImageView
                    android:layout_width="60dp"
                    android:layout_height="60dp"
-                   android:background="@drawable/inter_branch"/>
+                   android:background="@drawable/inter_branch" />
 
 
 
@@ -173,7 +175,7 @@
                <ImageView
                    android:layout_width="60dp"
                    android:layout_height="60dp"
-                   android:background="@drawable/branch_to"/>
+                   android:background="@drawable/branch_to" />
 
 
 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fav_itm_main"
+    android:layout_width="110dp"
+    android:layout_height="180dp"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                card_view:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_acc_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_acc_name"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:text="Ranjula Madushan"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fav_mag_edit"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/edit"/>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/fav_mag_delete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/delete"/>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

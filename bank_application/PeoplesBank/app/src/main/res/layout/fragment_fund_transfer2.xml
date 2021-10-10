@@ -22,16 +22,6 @@
             android:layout_height="10dp" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ADD FUND TRANSFER FAVORITES"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-
         <View
             android:layout_width="match_parent"
             android:layout_height="5dp" />
@@ -47,194 +37,261 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp" />
-
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Name"
-                    android:gravity="left"
+                    android:text="Amount"
+                    android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_curvy_tab_edittext"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <EditText
-                        android:id="@+id/fv_fund_tr_name"
-                        android:layout_width="match_parent"
-                        android:layout_marginStart="20dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="left"
-                        android:background="@null"
-                        android:inputType="number"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:lines="1" />
-
-                </LinearLayout>
-
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Account Holder's Name"
-                    android:gravity="left"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_curvy_tab_edittext"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <EditText
-                        android:id="@+id/fv_fund_tr_acc_name"
-                        android:layout_width="match_parent"
-                        android:layout_marginStart="20dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="left"
-                        android:background="@null"
-                        android:inputType="number"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:lines="1" />
-
-                </LinearLayout>
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Account Number"
-                    android:gravity="left"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_curvy_tab_edittext"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <EditText
-                        android:id="@+id/fv_fund_tr_acc_number"
-                        android:layout_width="match_parent"
-                        android:layout_marginStart="20dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="left"
-                        android:background="@null"
-                        android:inputType="number"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:lines="1" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Contact Number"
-                    android:gravity="left"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_curvy_tab_edittext"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <EditText
-                        android:id="@+id/fv_fund_tr_acc_mobile"
-                        android:layout_width="match_parent"
-                        android:layout_marginStart="20dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="left"
-                        android:background="@null"
-                        android:inputType="number"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:lines="1" />
-
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp" />
-
-                <ImageButton
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:background="@drawable/add_profile_pic"
-                    android:layout_gravity="center"/>
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="*Upload Profile Image"
-                    android:textSize="11sp"
-                    android:textStyle="italic"
-                    android:layout_gravity="center"/>
+
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/et_amount"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textStyle="bold"
+                        android:textSize="26sp"
+                        android:hint="Rs:00.00"
+                        android:lines="1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="From Account"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/et_fromAccount_view"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="LKR 5837 3782 7382 8293"
+                        android:lines="1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="to Account"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/et_toAccount_view"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="LKR 5837 3782 7382 8293"
+                        android:lines="1" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Beneficiary Name"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_curvy_tab_edittext"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <EditText
+                        android:id="@+id/transaction_ben_name"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:background="@null"
+                        android:hint="beneficiary name"
+                        android:inputType="textPassword"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:lines="1" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Beneficiary mobile Number"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_curvy_tab_edittext"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <EditText
+                        android:id="@+id/transaction_ben_mob"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:background="@null"
+                        android:hint="Beneficiary mobile Number"
+                        android:inputType="textPassword"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:lines="1" />
+
+                </LinearLayout>
 
 
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="20dp" />
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Remark"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_curvy_tab_edittext"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <EditText
+                        android:id="@+id/transaction_remark"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:background="@null"
+                        android:hint="remark"
+                        android:inputType="textPassword"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:lines="1" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_transaction2_back"
+                        style="@style/AppButton_Done"
+                        android:layout_height="50dp"
+                        android:layout_weight="3"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="BACK"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_transaction1_send"
+                        style="@style/AppButton_Done_green"
+                        android:layout_height="50dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="SEND"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
 
 
 
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_transaction1_next"
-                    style="@style/AppButton_Done"
-                    android:layout_height="30dp"
-                    android:layout_width="100dp"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:text="Done"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                </LinearLayout>
+
+
+
 
 
             </LinearLayout>
