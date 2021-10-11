@@ -69,7 +69,12 @@ public class HomeFragment extends Fragment {
         HomeFragment.btn_transaction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //MainActivity.loadFragment(new TransactionFragment());
+                Fragment newFragment = new TransactionFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+                MainActivity.bottomNavigationView.getMenu().getItem(1).setChecked(true);
             }
         });
 

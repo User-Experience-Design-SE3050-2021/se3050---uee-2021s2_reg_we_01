@@ -14,9 +14,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alpha.peoplesbank.MainActivity;
 import com.alpha.peoplesbank.R;
+import com.alpha.peoplesbank.fragment.TransactionFragment;
+import com.alpha.peoplesbank.interfaces.OnClickInterface;
 import com.alpha.peoplesbank.model.ItemAccountList;
 
 import java.util.List;
@@ -33,12 +38,14 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
     private List<ItemAccountList> data;
     static Context context;
     static Activity activity;
+    OnClickInterface onClickInterface;
 
 
-    public AccountListAdapter(List<ItemAccountList> data, Context context, Activity activity) {
+    public AccountListAdapter(List<ItemAccountList> data, OnClickInterface onClickInterface, Context context, Activity activity) {
         this.data = data;
         this.context = context;
         this.activity = activity;
+        this.onClickInterface = onClickInterface;
 
 
     }
@@ -62,11 +69,13 @@ public class AccountListAdapter extends RecyclerView.Adapter<AccountListAdapter.
 
 
         holder.AccountName.setText(name);
-       // holder.ivAccountImg.setImageDrawable();
 
-
-       // Glide.with(getApplicationContext()).load(item.icon_url).into(holder.ivAanimalImg);
-
+        holder.CVmain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickInterface.setValues(item.CardNumber);
+            }
+        });
 
 
 

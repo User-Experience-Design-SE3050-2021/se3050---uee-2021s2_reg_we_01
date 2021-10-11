@@ -72,7 +72,7 @@
                 android:lines="1"
                 android:maxLength="1"
                 android:singleLine="true"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="@color/textColor2"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -233,7 +233,7 @@
             android:weightSum="100">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_submit"
+                android:id="@+id/btn_submit_verify"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_weight="30"

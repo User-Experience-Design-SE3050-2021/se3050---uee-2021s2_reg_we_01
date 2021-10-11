@@ -32,7 +32,8 @@
                     android:id="@+id/iv_acc_img"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:scaleType="fitXY" />
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ranjuu"/>
 
             </androidx.cardview.widget.CardView>
 

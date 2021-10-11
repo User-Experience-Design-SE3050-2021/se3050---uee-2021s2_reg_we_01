@@ -26,6 +26,7 @@ import com.alpha.peoplesbank.fragment.FundTransferFragment;
 import com.alpha.peoplesbank.fragment.HomeFragment;
 import com.alpha.peoplesbank.fragment.SecondFragment;
 import com.alpha.peoplesbank.fragment.TransactionFragment;
+import com.alpha.peoplesbank.fragment.UserProfile;
 import com.alpha.peoplesbank.fragment.payment.PaymentService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     public ImageView ivProfile1;
     public TextView tvTitle, tvUserName;
     private Button payment;
-    public BottomNavigationView bottomNavigationView;
+    public static BottomNavigationView bottomNavigationView;
     public int selectedBottomNav;
     private Fragment fragment = null;
 
@@ -134,6 +135,10 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
                     case R.id.nav_payment:
                         loadFragment(new PaymentService());
+                        break;
+
+                    case R.id.nav_profile:
+                        loadFragment(new UserProfile());
 
                 
                         break;
