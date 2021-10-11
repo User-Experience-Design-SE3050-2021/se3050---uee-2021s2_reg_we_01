@@ -220,6 +220,7 @@
                         android:background="@null"
                         android:gravity="center"
                         android:hint="2021/11/07"
+                        android:clickable="true"
                         android:inputType="date"
                         android:lines="1"
                         android:textSize="20sp"

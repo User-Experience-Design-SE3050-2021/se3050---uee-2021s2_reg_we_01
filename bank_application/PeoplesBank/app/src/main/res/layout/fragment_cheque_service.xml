@@ -35,7 +35,7 @@
             android:layout_height="25dp" />
 
         <LinearLayout
-            android:id="@+id/one_time_bill_pay"
+            android:id="@+id/cheque_status_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

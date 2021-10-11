@@ -12,22 +12,27 @@
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/content_main.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/dialog_searchable_sprinner.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_add_fav_fund_trans.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_cheque_history.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_cheque_service.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_fund_transaction.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_home.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_one_time_bill_payment.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_otp.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_payment_history.xml" value="0.221875" />
+        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_payment_otp.xml" value="0.16822916666666668" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_payment_service.xml" value="0.20923913043478262" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_second.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_successful_message.xml" value="0.20923913043478262" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_transaction.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_transaction_history.xml" value="0.221875" />
+        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_user_profile.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/image_slider_item_layout.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/nav_header_main.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/single_bill_payment_history_item.xml" value="0.4" />
+        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/single_cheque_status_layout.xml" value="0.264" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/spinner_dropdown_style.xml" value="0.20923913043478262" />
         <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/transaction_history_item.xml" value="0.20923913043478262" />
+        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/menu/activity_main_drawer.xml" value="0.18229166666666666" />
       </map>
     </option>
   </component>

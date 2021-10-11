@@ -1,8 +1,10 @@
 package com.alpha.peoplesbank.fragment.payment;
 
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 
 import androidx.activity.OnBackPressedCallback;
@@ -15,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -29,9 +33,13 @@ public class OneTimeBillPayment extends Fragment {
     private View view;
     private TextView serviceProvider;
     private Dialog dialog;
-    private EditText dialog_edit;
+    private EditText dialog_edit,paymentDate;
+    private Button nextButton;
     private ListView dialog_listView;
     private ArrayList<String> stringArrayList;
+    private java.util.Calendar calendar = java.util.Calendar.getInstance();
+    private int day, month, year;
+
 
     public OneTimeBillPayment() {
 
@@ -44,6 +52,12 @@ public class OneTimeBillPayment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_one_time_bill_payment, container, false);
         serviceProvider = view.findViewById(R.id.one_time_payment_service_provider);
+        paymentDate = (EditText) view.findViewById(R.id.one_time_payment_time_date);
+        nextButton = view.findViewById(R.id.one_time_payment_next_button);
+
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        year = calendar.get(Calendar.YEAR);
+        month = calendar.get(Calendar.MONTH);
 
         stringArrayList = new ArrayList<>();
         stringArrayList.add("one");
@@ -56,6 +70,9 @@ public class OneTimeBillPayment extends Fragment {
         stringArrayList.add("eight");
         stringArrayList.add("nine");
         stringArrayList.add("ten");
+
+
+        paymentDate.setOnClickListener(paymentDateClickListener);
 
         PaymentService paymentService = new PaymentService();
 
@@ -112,7 +129,38 @@ public class OneTimeBillPayment extends Fragment {
             }
         });
 
+        PaymentOtp paymentOtp = new PaymentOtp();
+
+       nextButton.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, paymentOtp).commit();
+           }
+       });
+
         return view;
+    }
+
+
+    View.OnClickListener paymentDateClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            fromDateDialog();
+        }
+    };
+
+    public void fromDateDialog() {
+        DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                paymentDate.setText(dayOfMonth + "/" + monthOfYear + "/" + year);
+
+            }
+        };
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), listener, year, month, day);
+        datePickerDialog.show();
     }
 
 }
