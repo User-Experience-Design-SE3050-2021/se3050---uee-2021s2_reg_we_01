@@ -17,6 +17,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,7 +26,7 @@ import com.alpha.peoplesbank.fragment.FundTransferFragment;
 import com.alpha.peoplesbank.fragment.HomeFragment;
 import com.alpha.peoplesbank.fragment.SecondFragment;
 import com.alpha.peoplesbank.fragment.TransactionFragment;
-import com.alpha.peoplesbank.fragment.UserProfile;
+import com.alpha.peoplesbank.fragment.payment.PaymentService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     public ImageView ivProfile1;
     public TextView tvTitle, tvUserName;
+    private Button payment;
     public BottomNavigationView bottomNavigationView;
     public int selectedBottomNav;
     private Fragment fragment = null;
@@ -124,14 +126,16 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                         loadFragment(new HomeFragment());
                         break;
                     case R.id.nav_calculator:
-                        loadFragment(new SecondFragment());
+                        loadFragment(new FundTransferFragment());
                         break;
                     case R.id.nav_transactionIcon:
                         loadFragment(new TransactionFragment());
                         break;
 
-                    case R.id.nav_profile:
-                        loadFragment(new UserProfile());
+                    case R.id.nav_payment:
+                        loadFragment(new PaymentService());
+
+                
                         break;
                 }
                 return true;
