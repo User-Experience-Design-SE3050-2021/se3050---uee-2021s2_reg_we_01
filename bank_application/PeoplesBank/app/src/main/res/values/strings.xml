@@ -25,4 +25,25 @@
     <string name="paymentDate">Payment Date</string>
     <string name="next">Next</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="sample_data_array">
+        <item>Dasun</item>
+        <item>Category2</item>
+        <item>Category3</item>
+        <item>Category4</item>
+        <item>Category5</item>
+        <item>Category6</item>
+        <item>Category7</item>
+    </string-array>
+
+    <string-array name="sample_acc_data_array">
+        <item>1111 2222 3333 4444</item>
+        <item>1111 2222 3333 4444</item>
+        <item>1111 2222 3333 4444</item>
+        <item>1111 2222 3333 4444</item>
+        <item>Category5</item>
+        <item>Category6</item>
+        <item>Category7</item>
+    </string-array>
+
 </resources>

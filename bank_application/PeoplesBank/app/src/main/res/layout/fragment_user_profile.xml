@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="maneesha weragoda"
+                android:text="Maneesha Weragoda"
                 android:textColor="@color/black"
                 android:layout_marginLeft="50dp"
 
@@ -98,7 +98,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:text="Email"
                 android:textColor="@color/black"
                 android:layout_marginLeft="50dp"
                 android:textSize="14sp"
@@ -108,9 +108,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="maneesha weragoda"
+                android:text="maneesha@gmail.com"
                 android:textColor="@color/black"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="80dp"
 
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -134,7 +134,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:text="Mobile Number"
                 android:textColor="@color/black"
                 android:layout_marginLeft="50dp"
                 android:textSize="14sp"
@@ -144,9 +144,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="maneesha weragoda"
+                android:text="0714356689"
                 android:textColor="@color/black"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="20dp"
 
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -170,7 +170,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:text="ID Number"
                 android:textColor="@color/black"
                 android:layout_marginLeft="50dp"
                 android:textSize="14sp"
@@ -180,7 +180,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="maneesha weragoda"
+                android:text="967215286V"
                 android:textColor="@color/black"
                 android:layout_marginLeft="50dp"
 
@@ -201,13 +201,13 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_my_profile_reset_password"
+            android:id="@+id/btn_my_profile_change_password"
             style="@style/AppButton_Done"
             android:layout_height="30dp"
             android:layout_width="150dp"
             android:maxLines="1"
             android:singleLine="true"
-            android:text="Reset Password"
+            android:text="Change Password"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="12sp" />

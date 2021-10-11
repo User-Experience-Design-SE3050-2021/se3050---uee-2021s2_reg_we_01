@@ -18,6 +18,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.alpha.peoplesbank.Util.Config;
+import com.alpha.peoplesbank.ui.login.LoginActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -68,12 +69,12 @@ public class SplashActivity extends AppCompatActivity {
                 if (mSharedPreferences.contains(Config.LOGIN_USER)) {
 
                     Config.USER_NAME = mSharedPreferences.getString(Config.LOGIN_USER,"");
-                    Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                    Intent i = new Intent(SplashActivity.this, LoginActivity.class);
                     startActivity(i);
                     finish();
                 }else{
 
-                    Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                    Intent i = new Intent(SplashActivity.this, LoginActivity.class);
                     startActivity(i);
                     finish();
                 }

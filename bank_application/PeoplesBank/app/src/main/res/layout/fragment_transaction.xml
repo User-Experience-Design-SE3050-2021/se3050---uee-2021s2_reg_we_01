@@ -45,6 +45,7 @@
           android:background="@drawable/service_tab">
 
          <LinearLayout
+             android:id="@+id/lo_fundtransfer"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:orientation="horizontal"
@@ -99,6 +100,7 @@
           android:background="@drawable/service_tab">
 
          <LinearLayout
+             android:id="@+id/lo_inter_bank_transfer"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:orientation="horizontal"

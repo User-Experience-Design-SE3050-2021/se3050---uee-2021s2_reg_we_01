@@ -3,10 +3,13 @@ package com.alpha.peoplesbank.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.Button;
 
 import com.alpha.peoplesbank.R;
 
@@ -16,6 +19,10 @@ import com.alpha.peoplesbank.R;
  * create an instance of this fragment.
  */
 public class UserProfile extends Fragment {
+
+    View rootView;
+
+    public Button btn_my_profile_change_password;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,7 +67,34 @@ public class UserProfile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user_profile, container, false);
+        rootView = inflater.inflate(R.layout.fragment_user_profile, container, false);
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        setHasOptionsMenu(true);
+
+        initialize();
+        eventHandler();
+        return rootView;
+    }
+
+
+    public void initialize() {
+
+        btn_my_profile_change_password = rootView.findViewById(R.id.btn_my_profile_change_password);
+
+    }
+
+    public void eventHandler() {
+        btn_my_profile_change_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new ResetPassword();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+            }
+        });
+
+
     }
 }
