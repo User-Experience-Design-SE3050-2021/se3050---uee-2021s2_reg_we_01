@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.alpha.peoplesbank.MainActivity;
 import com.alpha.peoplesbank.R;
@@ -34,6 +36,8 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    public static Button btn_transaction;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -59,6 +63,18 @@ public class HomeFragment extends Fragment {
     public void initialize(){
 
         sliderView = rootView.findViewById(R.id.imageSlider);
+
+        btn_transaction = rootView.findViewById(R.id.btn_transaction);
+    }
+
+    public void eventHandler(){
+        HomeFragment.btn_transaction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //MainActivity.loadFragment(new TransactionFragment());
+            }
+        });
+
     }
 
     @Override
@@ -71,9 +87,11 @@ public class HomeFragment extends Fragment {
         setHasOptionsMenu(true);
 
         initialize();
-
+        eventHandler();
         return rootView;
     }
+
+
 
 
     public void setImagesToImageSlider() {

@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         setContentView(R.layout.activity_main);
 
         initialize();
+        eventHandler();
+    }
+
+    public void eventHandler(){
+
+
     }
 
     public void initialize(){

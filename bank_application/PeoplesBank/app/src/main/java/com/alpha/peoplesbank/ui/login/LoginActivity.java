@@ -32,7 +32,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alpha.peoplesbank.MainActivity;
 import com.alpha.peoplesbank.R;
+import com.alpha.peoplesbank.Registration1;
+import com.alpha.peoplesbank.SplashActivity;
 import com.alpha.peoplesbank.retrofit.APIClient;
 import com.alpha.peoplesbank.retrofit.APIInterface;
 import com.alpha.peoplesbank.ui.login.LoginViewModel;
@@ -133,10 +136,10 @@ public class LoginActivity extends AppCompatActivity {
         tvSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent in = new Intent(LoginActivity.this, Reg.class);
-//                in.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-//                in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                startActivity(in);
+                Intent in = new Intent(LoginActivity.this, Registration1.class);
+                in.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(in);
             }
         });
 
@@ -215,7 +218,14 @@ public class LoginActivity extends AppCompatActivity {
             if (userNameStatus && passwordStatus) {
                 //customProgressLoggin.showDialog(getString(R.string.validating_msg));
 
-                    Login(userName,password);
+                //Call service
+                    //Login(userName,password);
+
+                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(i);
+                finish();
 
             }
 
@@ -224,7 +234,7 @@ public class LoginActivity extends AppCompatActivity {
     public void setSignUpTextColor() {
         SpannableString ssTermsAndConditionText = new SpannableString(signUpText);
         ForegroundColorSpan fcsBlue = new ForegroundColorSpan(getResources().getColor(R.color.red));
-        ssTermsAndConditionText.setSpan(fcsBlue, 23, 30, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssTermsAndConditionText.setSpan(fcsBlue, 24, 31, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         tvSignup.setText(ssTermsAndConditionText);
     }
