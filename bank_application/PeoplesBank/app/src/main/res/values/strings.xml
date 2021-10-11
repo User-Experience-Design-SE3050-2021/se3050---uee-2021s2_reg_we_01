@@ -24,7 +24,13 @@
     <string name="amount">Amount</string>
     <string name="paymentDate">Payment Date</string>
     <string name="next">Next</string>
+    <string name="cheque_service">Cheque Service</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="cheque_status_inquiry">Cheque Status</string>
+    <string name="unrealize_cheque_status_inquiry">Unrealize Cheque Status</string>
+    <string name="chequeNo">Cheque No</string>
+    <string name="chequeStatus">Cheque Status</string>
 
     <string-array name="sample_data_array">
         <item>Dasun</item>

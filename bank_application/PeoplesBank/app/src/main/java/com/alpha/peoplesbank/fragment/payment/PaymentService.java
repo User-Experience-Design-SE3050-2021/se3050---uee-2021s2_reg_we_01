@@ -10,13 +10,15 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.alpha.peoplesbank.R;
+import com.alpha.peoplesbank.fragment.cheque.ChequeService;
 
 public class PaymentService extends Fragment {
 
-    private LinearLayout oneTimeBillPay,billHistory;
+    private LinearLayout oneTimeBillPay,billHistory,chequeService;
     private View view;
     private OneTimeBillPayment oneTimeBillPayment = new OneTimeBillPayment();
     private PaymentHistory paymentHistory = new PaymentHistory();
+    private ChequeService chequeServices = new ChequeService();
 
     public PaymentService() {
 
@@ -31,6 +33,7 @@ public class PaymentService extends Fragment {
         view = inflater.inflate(R.layout.fragment_payment_service, container, false);
         oneTimeBillPay = view.findViewById(R.id.one_time_bill_pay);
         billHistory = view.findViewById(R.id.bill_pay_history);
+        chequeService = view.findViewById(R.id.cheque_service);
         oneTimeBillPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +44,12 @@ public class PaymentService extends Fragment {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, paymentHistory).commit();
+            }
+        });
+        chequeService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, chequeServices).commit();
             }
         });
         return view;
