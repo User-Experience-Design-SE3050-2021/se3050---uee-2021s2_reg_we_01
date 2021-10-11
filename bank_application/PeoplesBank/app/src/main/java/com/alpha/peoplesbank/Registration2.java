@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class Registration2 extends AppCompatActivity {
 
     public EditText mobile, email, pwd, confirmPwd;
@@ -31,7 +32,7 @@ public class Registration2 extends AppCompatActivity {
         pwd = findViewById(R.id.re_pss_wrd);
         confirmPwd = findViewById(R.id.re_cnfrm_pass);
 
-        Next = findViewById(R.id.btn_transaction_next);
+        Next = findViewById(R.id.btn_transaction_next2);
     }
 
     public void eventHandler() {
@@ -52,11 +53,11 @@ public class Registration2 extends AppCompatActivity {
         String ConfirmPwd = confirmPwd.getText().toString().trim();
         String Pwd = pwd.getText().toString().trim();
 
-//        Intent i = new Intent(Registration2.this, Registration2.class);
-//        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-//        startActivity(i);
-//        finish();
+        Intent i = new Intent(Registration2.this, RegistrationOtp.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(i);
+        finish();
     }
 
 

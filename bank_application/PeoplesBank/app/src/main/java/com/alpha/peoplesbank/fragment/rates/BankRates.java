@@ -1,4 +1,4 @@
-package com.alpha.peoplesbank.fragment;
+package com.alpha.peoplesbank.fragment.rates;
 
 import android.os.Bundle;
 

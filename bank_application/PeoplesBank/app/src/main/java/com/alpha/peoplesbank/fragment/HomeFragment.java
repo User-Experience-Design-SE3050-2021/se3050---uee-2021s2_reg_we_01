@@ -9,30 +9,35 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.alpha.peoplesbank.MainActivity;
 import com.alpha.peoplesbank.R;
 import com.alpha.peoplesbank.Util.SliderAdapterExample;
+import com.alpha.peoplesbank.adapters.ChequeHistoryAdapter;
+import com.alpha.peoplesbank.adapters.TransactionHistoryAdapter;
 import com.alpha.peoplesbank.fragment.payment.PaymentService;
+import com.alpha.peoplesbank.model.TransactionHistory;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class HomeFragment extends Fragment {
 
     View rootView;
     private PaymentService paymentService = new PaymentService();
-//    private static final String ARG_PARAM1 = "param1";
-//    private static final String ARG_PARAM2 = "param2";
-
+    private RecyclerView recyclerView;
+    private TransactionHistoryAdapter transactionHistoryAdapter;
+    private List<TransactionHistory> transactionHistoryList = new ArrayList<>();
 
     public SliderView sliderView;
     public SliderAdapterExample sliderAdapter;
     public String[] addImagesArray = {};
-
-//    private String mParam1;
-//    private String mParam2;
 
     public static Button btn_transaction;
 
@@ -40,23 +45,6 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-//    public static HomeFragment newInstance(String param1, String param2) {
-//        HomeFragment fragment = new HomeFragment();
-//        Bundle args = new Bundle();
-//        args.putString(ARG_PARAM1, param1);
-//        args.putString(ARG_PARAM2, param2);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
-
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        if (getArguments() != null) {
-//            mParam1 = getArguments().getString(ARG_PARAM1);
-//            mParam2 = getArguments().getString(ARG_PARAM2);
-//        }
-//    }
 
     public void initialize(){
 
@@ -85,12 +73,27 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        transactionHistoryList.add(new TransactionHistory("transaction 01","2021/12/12","2500.00",1));
+        transactionHistoryList.add(new TransactionHistory("transaction 01","2021/12/12","2500.00",0));
+        transactionHistoryList.add(new TransactionHistory("transaction 01","2021/12/12","2500.00",1));
+        transactionHistoryList.add(new TransactionHistory("transaction 01","2021/12/12","2500.00",0));
+
         rootView = inflater.inflate(R.layout.fragment_home, container, false);
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setHasOptionsMenu(true);
-
         initialize();
         eventHandler();
+
+
+        recyclerView =  rootView.findViewById(R.id.transaction_history_recycleView);
+
+        transactionHistoryAdapter = new TransactionHistoryAdapter(transactionHistoryList, getContext());
+
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(transactionHistoryAdapter);
+
+
         return rootView;
     }
 

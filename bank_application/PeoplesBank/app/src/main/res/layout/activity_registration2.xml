@@ -227,7 +227,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_transaction_next"
+            android:id="@+id/btn_transaction_next2"
             style="@style/AppButton_Done"
             android:layout_height="30dp"
             android:maxLines="1"

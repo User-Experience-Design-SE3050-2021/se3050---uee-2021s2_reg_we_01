@@ -328,7 +328,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:background="@drawable/card" />
+                        android:background="@drawable/credit_card" />
 
 
                 </RelativeLayout>
