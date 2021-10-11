@@ -3,36 +3,45 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/janith/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.19635416666666666" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/accountl_list_item.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/activity_fund_transfer1.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/activity_login.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/activity_main.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/activity_registration1.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/content_main.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/dialog_searchable_sprinner.xml" value="0.19635416666666666" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_add_fav_fund_trans.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_cheque_history.xml" value="0.18229166666666666" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_cheque_service.xml" value="0.21666666666666667" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_fund_transaction.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_home.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_one_time_bill_payment.xml" value="0.19635416666666666" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_otp.xml" value="0.19635416666666666" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_payment_history.xml" value="0.221875" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_payment_otp.xml" value="0.16822916666666668" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_payment_service.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_second.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_successful_message.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_transaction.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_transaction_history.xml" value="0.221875" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/fragment_user_profile.xml" value="0.18229166666666666" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/image_slider_item_layout.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/nav_header_main.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/single_bill_payment_history_item.xml" value="0.4" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/single_cheque_status_layout.xml" value="0.264" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/spinner_dropdown_style.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/layout/transaction_history_item.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/janith/Desktop/UEE/se3050---uee-2021s2_reg_we_01/bank_application/PeoplesBank/app/src/main/res/menu/activity_main_drawer.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/bg_curvy_button_green.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/bg_curvy_button_yellow.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/bg_curvy_tab_edittext.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/bg_done_button.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/bg_done_button_green.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/bg_next_button.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/bg_otp_edit_tab.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/bg_ripple_button_red.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/drawable/otp_white_boarder.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/accountl_list_item.xml" value="0.21128205128205127" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/activity_fund_transfer1.xml" value="0.2194871794871795" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/activity_login.xml" value="0.21128205128205127" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/activity_main.xml" value="0.22314814814814815" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/activity_registration1.xml" value="0.21128205128205127" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/activity_registration2.xml" value="0.2" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/activity_splash.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/content_main.xml" value="0.2890625" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fav_management_item.xml" value="0.536" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_add_fav_fund_trans.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_fav_management.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_fund_transaction.xml" value="0.264" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_fund_transfer2.xml" value="0.264" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_home.xml" value="0.24851680949241925" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_interest_rates_for_deposits.xml" value="0.2890625" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_otp.xml" value="0.264" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_registration_otp.xml" value="0.2" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_reset_password.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_second.xml" value="0.21128205128205127" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_successful_message.xml" value="0.21128205128205127" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_transaction.xml" value="0.21128205128205127" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_transaction_history.xml" value="0.22314814814814815" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/fragment_user_profile.xml" value="0.264" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/image_slider_item_layout.xml" value="0.2890625" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/nav_header_main.xml" value="0.3490740740740741" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/splash_popup_image.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/layout/transaction_history_item.xml" value="0.22314814814814815" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/menu/bottom_bar_menu.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Ranjula/AndroidStudioProjects/New folder/bank_application/PeoplesBank/app/src/main/res/menu/drawer_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

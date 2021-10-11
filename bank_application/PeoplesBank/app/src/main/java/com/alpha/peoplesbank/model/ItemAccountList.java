@@ -7,6 +7,6 @@ package com.alpha.peoplesbank.model;
 public class ItemAccountList {
     public int id;
     public String name;
-    public String image;
+    public String CardNumber;
 
 }

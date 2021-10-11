@@ -7,29 +7,33 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alpha.peoplesbank.R;
 import com.alpha.peoplesbank.adapters.AccountListAdapter;
+import com.alpha.peoplesbank.interfaces.OnClickInterface;
 import com.alpha.peoplesbank.model.ItemAccountList;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FundTransferFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class FundTransferFragment extends Fragment {
 
     View rootView;
+
+    public LinearLayout add_fav_fund_trans;
+    public Button btn_transaction1_next;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -37,8 +41,12 @@ public class FundTransferFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    public EditText et_toAccount;
+
     public Spinner Accounts;
     public int mSelectedIndex = 0;
+
+    public OnClickInterface onClickInterface;
 
 
     private List<ItemAccountList> data;
@@ -71,11 +79,17 @@ public class FundTransferFragment extends Fragment {
         Accounts = (Spinner) rootView.findViewById(R.id.sp_accounts);
         AccountRecyclerView = rootView.findViewById(R.id.account_recyclerview);
 
+        et_toAccount = rootView.findViewById(R.id.et_toAccount);
+
         data = new ArrayList<ItemAccountList>();
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
 
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         AccountRecyclerView.setLayoutManager(layoutManager);
+
+        add_fav_fund_trans = rootView.findViewById(R.id.add_fav_trans);
+
+        btn_transaction1_next = rootView.findViewById(R.id.btn_transaction1_next);
     }
 
     @Override
@@ -87,10 +101,63 @@ public class FundTransferFragment extends Fragment {
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setHasOptionsMenu(true);
 
+
+
+
+
         initialize();
-        //setDataToSpinner();
+        eventHandler();
 
         return rootView;
+    }
+
+
+
+
+    public void eventHandler() {
+
+        add_fav_fund_trans.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new add_fav_fund_trans();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+            }
+        });
+
+
+        btn_transaction1_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new fundTransfer2();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+            }
+        });
+
+        onClickInterface = new OnClickInterface() {
+            @Override
+            public void setValues(String card) {
+
+                et_toAccount.setText(card);
+
+            }
+        };
+
+        String[] sample_data_array = getResources().getStringArray(R.array.sample_data_array);
+        String[] sample_acc_data_array = getResources().getStringArray(R.array.sample_acc_data_array);
+
+        for (int i = 0; i < sample_data_array.length; i++){
+
+            addMDataEvent(sample_data_array[i], sample_acc_data_array[i]);
+        }
+
+        setDataToAdapter();
+
     }
 
     public void setDataToSpinner() {
@@ -156,11 +223,24 @@ public class FundTransferFragment extends Fragment {
 
     public void setDataToAdapter() {
 
-        accountListAdapter = new AccountListAdapter(data, getContext(), getActivity());
+        System.out.println("People's bank app dataCard size "+data.size());
+
+        accountListAdapter = new AccountListAdapter(data, onClickInterface, getContext(), getActivity());
 //            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(GetExGBActivity.this);
 //            cardRecyclerView.setLayoutManager(mLayoutManager);
         AccountRecyclerView.setItemAnimator(new DefaultItemAnimator());
         AccountRecyclerView.setAdapter(accountListAdapter);
+    }
+
+    public void addMDataEvent(String Name, String CardNumber) {
+
+        ItemAccountList item = new ItemAccountList();
+
+        item.name = Name;
+        item.CardNumber = CardNumber;
+
+
+        data.add(item);
     }
 
 

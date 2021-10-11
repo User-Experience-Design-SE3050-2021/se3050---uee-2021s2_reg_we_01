@@ -3,10 +3,14 @@ package com.alpha.peoplesbank.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.alpha.peoplesbank.R;
 
@@ -16,6 +20,9 @@ import com.alpha.peoplesbank.R;
  * create an instance of this fragment.
  */
 public class add_fav_fund_trans extends Fragment {
+
+    View rootView;
+    public Button btn_addFav_done;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,10 +64,38 @@ public class add_fav_fund_trans extends Fragment {
         }
     }
 
+    public void initialize(){
+
+        btn_addFav_done = rootView.findViewById(R.id.btn_addFav_done);
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_fav_fund_trans, container, false);
+        rootView = inflater.inflate(R.layout.fragment_add_fav_fund_trans, container, false);
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        setHasOptionsMenu(true);
+
+        initialize();
+        eventHandler();
+        return rootView;
     }
+
+    private void eventHandler() {
+
+        btn_addFav_done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new FundTransferFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+            }
+        });
+    }
+
+
+
 }

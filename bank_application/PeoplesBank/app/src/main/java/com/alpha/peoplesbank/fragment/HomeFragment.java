@@ -8,6 +8,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.alpha.peoplesbank.MainActivity;
 import com.alpha.peoplesbank.R;
@@ -17,11 +18,7 @@ import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnima
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class HomeFragment extends Fragment {
 
     View rootView;
@@ -36,6 +33,8 @@ public class HomeFragment extends Fragment {
 
 //    private String mParam1;
 //    private String mParam2;
+
+    public static Button btn_transaction;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -62,6 +61,23 @@ public class HomeFragment extends Fragment {
     public void initialize(){
 
         sliderView = rootView.findViewById(R.id.imageSlider);
+
+        btn_transaction = rootView.findViewById(R.id.btn_transaction);
+    }
+
+    public void eventHandler(){
+        HomeFragment.btn_transaction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new TransactionFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+                MainActivity.bottomNavigationView.getMenu().getItem(1).setChecked(true);
+            }
+        });
+
     }
 
     @Override
@@ -74,10 +90,9 @@ public class HomeFragment extends Fragment {
         setHasOptionsMenu(true);
 
         initialize();
-
+        eventHandler();
         return rootView;
     }
-
 
 
     public void setImagesToImageSlider() {

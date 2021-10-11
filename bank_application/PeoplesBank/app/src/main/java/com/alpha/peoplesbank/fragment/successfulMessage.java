@@ -15,15 +15,15 @@ import com.alpha.peoplesbank.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ResetPassword#newInstance} factory method to
+ * Use the {@link successfulMessage#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ResetPassword extends Fragment {
-
+public class successfulMessage extends Fragment {
 
     View rootView;
 
-    public Button btn_my_profile_reset_password;
+    public Button btn_transaction_success;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +34,7 @@ public class ResetPassword extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ResetPassword() {
+    public successfulMessage() {
         // Required empty public constructor
     }
 
@@ -44,11 +44,11 @@ public class ResetPassword extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ResetPassword.
+     * @return A new instance of fragment successfulMessage.
      */
     // TODO: Rename and change types and number of parameters
-    public static ResetPassword newInstance(String param1, String param2) {
-        ResetPassword fragment = new ResetPassword();
+    public static successfulMessage newInstance(String param1, String param2) {
+        successfulMessage fragment = new successfulMessage();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,7 +68,7 @@ public class ResetPassword extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_reset_password, container, false);
+        rootView = inflater.inflate(R.layout.fragment_successful_message, container, false);
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setHasOptionsMenu(true);
 
@@ -80,15 +80,15 @@ public class ResetPassword extends Fragment {
 
     public void initialize() {
 
-        btn_my_profile_reset_password = rootView.findViewById(R.id.btn_my_profile_reset_password);
+        btn_transaction_success = rootView.findViewById(R.id.btn_transaction_success);
 
     }
 
     public void eventHandler() {
-        btn_my_profile_reset_password.setOnClickListener(new View.OnClickListener() {
+        btn_transaction_success.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment newFragment = new UserProfile();
+                Fragment newFragment = new HomeFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.frame_container, newFragment);
                 transaction.addToBackStack(null);
