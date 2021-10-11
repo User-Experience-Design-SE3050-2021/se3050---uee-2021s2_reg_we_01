@@ -52,6 +52,7 @@ public class FundTransferFragment extends Fragment {
     private List<ItemAccountList> data;
     public static AccountListAdapter accountListAdapter;
     private RecyclerView AccountRecyclerView;
+    private Spinner fundTransactionSpinner;
 
     public FundTransferFragment() {
         // Required empty public constructor
@@ -98,11 +99,10 @@ public class FundTransferFragment extends Fragment {
         // Inflate the layout for this fragment
 
         rootView = inflater.inflate(R.layout.fragment_fund_transaction, container, false);
+        fundTransactionSpinner = rootView.findViewById(R.id.sp_accounts);
+        fillAccountNumbers();
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setHasOptionsMenu(true);
-
-
-
 
 
         initialize();
@@ -242,6 +242,18 @@ public class FundTransferFragment extends Fragment {
 
         data.add(item);
     }
+    private void fillAccountNumbers() {
+        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1);
+        adapter.add("2017");
+        adapter.add("2018");
+        adapter.add("2019");
+        adapter.add("2020");
+        adapter.add("2021");
+        adapter.add("2022");
 
+        //SET ADAPTER INSTANCE TO OUR SPINNER
+        fundTransactionSpinner.setAdapter(adapter);
+
+    }
 
 }

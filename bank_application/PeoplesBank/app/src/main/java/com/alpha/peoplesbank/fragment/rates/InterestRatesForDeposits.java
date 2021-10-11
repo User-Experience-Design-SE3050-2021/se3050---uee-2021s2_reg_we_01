@@ -1,4 +1,4 @@
-package com.alpha.peoplesbank.fragment;
+package com.alpha.peoplesbank.fragment.rates;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.alpha.peoplesbank.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CalculationService#newInstance} factory method to
+ * Use the {@link InterestRatesForDeposits#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CalculationService extends Fragment {
+public class InterestRatesForDeposits extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class CalculationService extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public CalculationService() {
+    public InterestRatesForDeposits() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class CalculationService extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CalculationService.
+     * @return A new instance of fragment InterestRatesForDeposits.
      */
     // TODO: Rename and change types and number of parameters
-    public static CalculationService newInstance(String param1, String param2) {
-        CalculationService fragment = new CalculationService();
+    public static InterestRatesForDeposits newInstance(String param1, String param2) {
+        InterestRatesForDeposits fragment = new InterestRatesForDeposits();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class CalculationService extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calculation_service, container, false);
+        return inflater.inflate(R.layout.fragment_interest_rates_for_deposits, container, false);
     }
 }
