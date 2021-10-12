@@ -31,6 +31,7 @@ import java.util.ArrayList;
 public class OneTimeBillPayment extends Fragment {
 
     private View view;
+    private Spinner paymentFromAccount;
     private TextView serviceProvider;
     private Dialog dialog;
     private EditText dialog_edit,paymentDate;
@@ -54,22 +55,26 @@ public class OneTimeBillPayment extends Fragment {
         serviceProvider = view.findViewById(R.id.one_time_payment_service_provider);
         paymentDate = (EditText) view.findViewById(R.id.one_time_payment_time_date);
         nextButton = view.findViewById(R.id.one_time_payment_next_button);
+        paymentFromAccount = view.findViewById(R.id.one_time_payment_from_accounts);
+
+        fillAccountNumber();
 
         day = calendar.get(Calendar.DAY_OF_MONTH);
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
 
         stringArrayList = new ArrayList<>();
-        stringArrayList.add("one");
-        stringArrayList.add("two");
-        stringArrayList.add("three");
-        stringArrayList.add("four");
-        stringArrayList.add("five");
-        stringArrayList.add("six");
-        stringArrayList.add("seven");
-        stringArrayList.add("eight");
-        stringArrayList.add("nine");
-        stringArrayList.add("ten");
+        stringArrayList.add("ALLIANZ LIFE INSURANCE");
+        stringArrayList.add("ASSET LINE LEASING");
+        stringArrayList.add("BUDDHIST LADIES COLLEGE");
+        stringArrayList.add("CEYLINCO INSURANCE-LIFE POLICY");
+        stringArrayList.add("CEYLON ELECTRICITY BOARD");
+        stringArrayList.add("CITIZEN DEVELOPMENT BANK");
+        stringArrayList.add("COLOMBO MUNICIPAL COUNCIL");
+        stringArrayList.add("CEYLON PETROLEUM CORPORATION");
+        stringArrayList.add("D.J TRADING CO LED");
+
+
 
 
         paymentDate.setOnClickListener(paymentDateClickListener);
@@ -161,6 +166,17 @@ public class OneTimeBillPayment extends Fragment {
         };
         DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), listener, year, month, day);
         datePickerDialog.show();
+    }
+
+    private void fillAccountNumber() {
+        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1);
+        adapter.add("LKR 5837 6742 3588 2398");
+        adapter.add("LKR 3425 6734 1845 5734");
+
+
+        //SET ADAPTER INSTANCE TO OUR SPINNER
+        paymentFromAccount.setAdapter(adapter);
+
     }
 
 }

@@ -235,7 +235,7 @@
         android:weightSum="100">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_submit"
+            android:id="@+id/btn_payment_submit"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="30"
