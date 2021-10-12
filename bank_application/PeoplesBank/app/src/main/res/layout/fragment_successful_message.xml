@@ -39,7 +39,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="29th April 2021"
+            android:text="12th October 2021"
             android:textSize="20sp"
             android:textStyle="normal"
             android:textAlignment="center"/>
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/green"
-            android:text="Rs.25000.00"
+            android:text="Rs.24,000.00"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textAlignment="center"/>
@@ -60,7 +60,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sent - LKR 43567 44563 8987"
+            android:text="Sent - LKR 4824 4562 9837 5543"
             android:textSize="16sp"
             android:textStyle="normal"
             android:textAlignment="center"/>

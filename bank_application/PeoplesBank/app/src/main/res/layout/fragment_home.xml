@@ -155,6 +155,7 @@
             android:layout_height="match_parent"/>
 
         <Button
+            android:id="@+id/btn_pawning"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:text="Pawning"
@@ -171,6 +172,7 @@
             android:layout_height="match_parent"/>
 
         <Button
+            android:id="@+id/btn_payment"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:text="Payment"

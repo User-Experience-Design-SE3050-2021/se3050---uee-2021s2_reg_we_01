@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -39,7 +40,8 @@ public class HomeFragment extends Fragment {
     public SliderAdapterExample sliderAdapter;
     public String[] addImagesArray = {};
 
-    public static Button btn_transaction;
+    public static Button btn_transaction,btn_pawning,btn_payment;
+    public static TextView view_All_home;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -51,6 +53,10 @@ public class HomeFragment extends Fragment {
         sliderView = rootView.findViewById(R.id.imageSlider);
 
         btn_transaction = rootView.findViewById(R.id.btn_transaction);
+        btn_pawning = rootView.findViewById(R.id.btn_pawning);
+        btn_payment = rootView.findViewById(R.id.btn_payment);
+        view_All_home = rootView.findViewById(R.id.view_All_home);
+
     }
 
     public void eventHandler(){
@@ -66,6 +72,41 @@ public class HomeFragment extends Fragment {
             }
         });
 
+
+        HomeFragment.btn_pawning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new PawningService();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+            }
+        });
+
+        HomeFragment.view_All_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new transactionHistory();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+            }
+        });
+
+        HomeFragment.btn_payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new PaymentService();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+                MainActivity.bottomNavigationView.getMenu().getItem(0).setChecked(true);
+            }
+        });
+
     }
 
     @Override
@@ -73,8 +114,8 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        transactionHistoryList.add(new TransactionHistory("transaction 01","2021/12/12","2500.00",1));
-        transactionHistoryList.add(new TransactionHistory("transaction 01","2021/12/12","2500.00",0));
+        transactionHistoryList.add(new TransactionHistory("W A Ranjula","2021/10/12","24000.00",1));
+        transactionHistoryList.add(new TransactionHistory("Maneesha W R ","2021/12/12","2500.00",0));
         transactionHistoryList.add(new TransactionHistory("transaction 01","2021/12/12","2500.00",1));
         transactionHistoryList.add(new TransactionHistory("transaction 01","2021/12/12","2500.00",0));
 

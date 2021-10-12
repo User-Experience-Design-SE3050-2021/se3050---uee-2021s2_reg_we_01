@@ -148,8 +148,8 @@ public class FundTransferFragment extends Fragment {
             }
         };
 
-        String[] sample_data_array = getResources().getStringArray(R.array.sample_data_array);
-        String[] sample_acc_data_array = getResources().getStringArray(R.array.sample_acc_data_array);
+        String[] sample_data_array = getResources().getStringArray(R.array.sample_data_name);
+        String[] sample_acc_data_array = getResources().getStringArray(R.array.sample_acc_data_account);
 
         for (int i = 0; i < sample_data_array.length; i++){
 
@@ -244,12 +244,9 @@ public class FundTransferFragment extends Fragment {
     }
     private void fillAccountNumbers() {
         ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1);
-        adapter.add("2017");
-        adapter.add("2018");
-        adapter.add("2019");
-        adapter.add("2020");
-        adapter.add("2021");
-        adapter.add("2022");
+        adapter.add("LKR 5837 3782 7382 8293");
+        adapter.add("LKR 3445 6643 5432 5444");
+
 
         //SET ADAPTER INSTANCE TO OUR SPINNER
         fundTransactionSpinner.setAdapter(adapter);

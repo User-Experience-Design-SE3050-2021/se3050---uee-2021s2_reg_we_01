@@ -29,22 +29,12 @@
             android:textAlignment="center"/>
 
 
-
-        <ScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_medicalHistoryList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="vertical">
-
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
-
-
-
-
-
-        </ScrollView>
+            android:layout_marginTop="16dp"
+            tools:listitem="@layout/fav_management_item" />
 
 
 
