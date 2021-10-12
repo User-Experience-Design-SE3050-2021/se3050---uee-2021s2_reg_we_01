@@ -27,7 +27,9 @@ import com.alpha.peoplesbank.fragment.HomeFragment;
 import com.alpha.peoplesbank.fragment.SecondFragment;
 import com.alpha.peoplesbank.fragment.TransactionFragment;
 import com.alpha.peoplesbank.fragment.UserProfile;
+import com.alpha.peoplesbank.fragment.fav_management;
 import com.alpha.peoplesbank.fragment.payment.PaymentService;
+import com.alpha.peoplesbank.fragment.rates.BankRates;
 import com.alpha.peoplesbank.fragment.rates.InterestRatesForDeposits;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -104,7 +106,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_home) {
 
-            // set the event
+            loadFragment(new HomeFragment());
+        }else if (id == R.id.nav_fav_man){
+            loadFragment(new fav_management());
+
+        }else if (id == R.id.nav_bank_rate){
+
+            loadFragment(new BankRates());
+        }else if (id == R.id.nav_Transfer){
+
+            loadFragment(new TransactionFragment());
+
+
+        }else if (id == R.id.nav_payment_service){
+            loadFragment(new PaymentService());
+
+        }else if (id == R.id.nav_Pawning_service){
+
+            loadFragment(new PaymentService());
+        }else if (id == R.id.nav_profile_service){
+            loadFragment(new UserProfile());
+
+
         }
 
 

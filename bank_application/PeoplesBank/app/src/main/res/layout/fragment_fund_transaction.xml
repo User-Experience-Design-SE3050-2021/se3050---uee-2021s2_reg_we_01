@@ -172,19 +172,17 @@
                                             android:background="@drawable/add_mark"/>
 
 
-
-
                                         <TextView
                                             android:id="@+id/tv_acc_name"
                                             android:layout_width="match_parent"
-                                            android:layout_height="30dp"
-                                            android:gravity="center"
-                                            android:text="Add Account"
-                                            android:textSize="14dp"
-                                            android:textColor="@color/accent_disable"
-                                            android:maxLines="2"
+                                            android:layout_height="wrap_content"
                                             android:layout_marginTop="65dp"
-                                            android:textStyle="bold"/>
+                                            android:gravity="center"
+                                            android:maxLines="2"
+                                            android:text="Add Favorite Account"
+                                            android:textColor="@color/accent_disable"
+                                            android:textSize="14dp"
+                                            android:textStyle="bold" />
 
 
 
@@ -257,7 +255,7 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_transaction1_next"
-                    style="@style/AppButton_next"
+                    style="@style/AppButton_Done"
                     android:layout_height="0dp"
                     android:layout_weight="3"
                     android:maxLines="1"

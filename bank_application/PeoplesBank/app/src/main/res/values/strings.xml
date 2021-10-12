@@ -35,20 +35,31 @@
     <string name="savingInterestRate">Saving Interest Rate</string>
     <string name="fixDepositProduct">Fix Deposit Product</string>
 
-    <string-array name="sample_data_array">
-        <item>Dasun</item>
-        <item>Category2</item>
-        <item>Category3</item>
-        <item>Category4</item>
+    <string-array name="sample_data_name">
+        <item>Ranjula</item>
+        <item>Ranjula</item>
+        <item>Ranjula</item>
+        <item>Ranjula</item>
         <item>Category5</item>
         <item>Category6</item>
         <item>Category7</item>
     </string-array>
 
-    <string-array name="sample_acc_data_array">
-        <item>1111 2222 3333 4444</item>
-        <item>1111 2222 3333 4444</item>
-        <item>1111 2222 3333 4444</item>
+    <string-array name="sample_acc_data_account">
+        <item>LKR 4824 4562 9837 5543</item>
+        <item>LKR 4824 4562 9837 5543</item>
+        <item>LKR 4824 4562 9837 5543</item>
+        <item>LKR 4824 4562 9837 5543</item>
+        <item>Category5</item>
+        <item>Category6</item>
+        <item>Category7</item>
+    </string-array>
+
+
+    <string-array name="sample_acc_data_mobile">
+        <item>0713737220</item>
+        <item>0777226828</item>
+        <item>0713434569</item>
         <item>1111 2222 3333 4444</item>
         <item>Category5</item>
         <item>Category6</item>

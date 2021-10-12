@@ -2,9 +2,11 @@ package com.alpha.peoplesbank;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -16,6 +18,7 @@ public class Registration1 extends AppCompatActivity {
     public Spinner FromAcc, IdentityType;
     public EditText AccNo, IdentityNo;
     public Button Next;
+    private Spinner accountType,idType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,10 @@ public class Registration1 extends AppCompatActivity {
         IdentityNo = findViewById(R.id.re_id_number);
 
         Next = findViewById(R.id.btn_transaction1_next);
+
+        accountType = findViewById(R.id.sp_accounts_type);
+        idType = findViewById(R.id.re_id_type);
+
     }
 
 
@@ -62,5 +69,17 @@ public class Registration1 extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+
+//    private void fillAccountNumbers() {
+//        ArrayAdapter adapter = new ArrayAdapter(Con, android.R.layout.simple_list_item_1);
+//        adapter.add("5337 3782 7382 8293");
+//        adapter.add("1001 3456 8990 9000");
+//
+//
+//        //SET ADAPTER INSTANCE TO OUR SPINNER
+//        accountType.setAdapter(adapter);
+//
+//    }
 
 }
