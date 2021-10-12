@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.payment.PaymentSuccessfulMessage">
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="560dp"
+        android:background="@drawable/white_box"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/green_successful"
+            android:layout_gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Successful"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="07th November 2021"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:textAlignment="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:text="Rs.5000.00"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sent - LKR 5837 6842 3588 2398"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textAlignment="center"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_payment_success"
+            style="@style/AppButton_Done"
+            android:layout_height="30dp"
+            android:layout_width="100dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Done"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

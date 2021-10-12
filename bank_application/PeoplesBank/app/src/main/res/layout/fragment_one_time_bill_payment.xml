@@ -107,7 +107,7 @@
                     android:background="@drawable/bg_curvy_tab_edittext"
                     android:elevation="3dp">
 
-                    <TextView
+                    <Spinner
                         android:id="@+id/one_time_payment_from_accounts"
                         android:layout_width="match_parent"
                         android:hint="LKR 5837 6742 3588 2398"
@@ -115,7 +115,6 @@
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:layout_height="30dp"
-                        android:editable="false"
                         android:layout_marginTop="2dp"
                         tools:ignore="Deprecated" />
 
