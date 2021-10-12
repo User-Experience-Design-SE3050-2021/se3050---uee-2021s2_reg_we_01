@@ -30,13 +30,14 @@ import com.alpha.peoplesbank.fragment.UserProfile;
 import com.alpha.peoplesbank.fragment.fav_management;
 import com.alpha.peoplesbank.fragment.payment.PaymentService;
 import com.alpha.peoplesbank.fragment.rates.BankRates;
+import com.alpha.peoplesbank.fragment.rates.InterestRatesForDeposits;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
-public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public static View navHeaderView;
     NavigationView navigationView;
 
@@ -48,7 +49,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     private Fragment fragment = null;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         eventHandler();
     }
 
-    public void eventHandler(){
+    public void eventHandler() {
 
 
     }
 
-    public void initialize(){
+    public void initialize() {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.post(new Runnable() {
@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
 
-
         navigationView.setNavigationItemSelectedListener(this);
 
         navHeaderView = navigationView.getHeaderView(0);
@@ -94,12 +93,11 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         ivProfile1 = navHeaderView.findViewById(R.id.civ_profileImage);
         tvTitle = navHeaderView.findViewById(R.id.tv_navHeaderTitle);
-        tvUserName  = navHeaderView.findViewById(R.id.tv_navHeaderUsername);
+        tvUserName = navHeaderView.findViewById(R.id.tv_navHeaderUsername);
         bottomMenu();
 
         loadFragment(new HomeFragment());
     }
-
 
 
     @Override
@@ -138,7 +136,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         return true;
     }
 
-    private void bottomMenu(){
+    private void bottomMenu() {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -150,7 +148,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                         loadFragment(new HomeFragment());
                         break;
                     case R.id.nav_calculator:
-                        loadFragment(new FundTransferFragment());
+                        loadFragment(new InterestRatesForDeposits());
                         break;
                     case R.id.nav_transactionIcon:
                         loadFragment(new TransactionFragment());
@@ -163,7 +161,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                     case R.id.nav_profile:
                         loadFragment(new UserProfile());
 
-                
+
                         break;
                 }
                 return true;
@@ -173,7 +171,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         bottomNavigationView.getMenu().getItem(2).setChecked(true);
     }
-
 
 
     public void loadFragment(Fragment fragment) {

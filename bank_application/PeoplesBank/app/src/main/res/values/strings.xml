@@ -31,6 +31,9 @@
     <string name="unrealize_cheque_status_inquiry">Unrealize Cheque Status</string>
     <string name="chequeNo">Cheque No</string>
     <string name="chequeStatus">Cheque Status</string>
+    <string name="fixDepositInterestRate">Fix Deposit Interest Rate</string>
+    <string name="savingInterestRate">Saving Interest Rate</string>
+    <string name="fixDepositProduct">Fix Deposit Product</string>
 
     <string-array name="sample_data_name">
         <item>Ranjula</item>
