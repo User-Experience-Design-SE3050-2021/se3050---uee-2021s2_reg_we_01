@@ -13,7 +13,7 @@ import com.alpha.peoplesbank.R;
 
 public class InterestRatesForDeposits extends Fragment {
     private View view;
-    private LinearLayout linearLayoutFix,linearLayoutSaving;
+    private LinearLayout linearLayoutFix, linearLayoutSaving;
 
     public InterestRatesForDeposits() {
         // Required empty public constructor
