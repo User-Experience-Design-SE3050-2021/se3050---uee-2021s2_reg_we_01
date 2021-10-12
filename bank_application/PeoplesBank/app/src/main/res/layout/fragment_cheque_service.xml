@@ -62,7 +62,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:background="@drawable/one_time_bill_payment" />
+                        android:background="@drawable/chh_02" />
 
 
                 </RelativeLayout>
@@ -115,7 +115,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:background="@drawable/favourite_bill_payment" />
+                        android:background="@drawable/chhh_01" />
 
 
                 </RelativeLayout>

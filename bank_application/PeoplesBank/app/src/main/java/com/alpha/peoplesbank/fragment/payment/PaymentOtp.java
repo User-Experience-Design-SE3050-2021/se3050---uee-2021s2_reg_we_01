@@ -2,6 +2,7 @@ package com.alpha.peoplesbank.fragment.payment;
 
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -38,6 +39,18 @@ public class PaymentOtp extends Fragment {
                 Toast.makeText(getActivity(),"Payment Verified",Toast.LENGTH_SHORT).show();
             }
         });
+        OneTimeBillPayment paymentService = new OneTimeBillPayment();
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+
+            @Override
+            public void handleOnBackPressed() {
+                // Handle the back button event
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, paymentService).commit();
+            }
+        };
+
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), callback);
 
         return view;
     }
