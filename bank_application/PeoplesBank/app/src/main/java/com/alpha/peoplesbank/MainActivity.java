@@ -27,6 +27,7 @@ import com.alpha.peoplesbank.fragment.HomeFragment;
 import com.alpha.peoplesbank.fragment.SecondFragment;
 import com.alpha.peoplesbank.fragment.TransactionFragment;
 import com.alpha.peoplesbank.fragment.UserProfile;
+import com.alpha.peoplesbank.fragment.cheque.ChequeService;
 import com.alpha.peoplesbank.fragment.fav_management;
 import com.alpha.peoplesbank.fragment.payment.PaymentService;
 import com.alpha.peoplesbank.fragment.rates.BankRates;
@@ -120,6 +121,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }else if (id == R.id.nav_payment_service){
             loadFragment(new PaymentService());
+
+        }else if (id == R.id.nav_cheque_service){
+            loadFragment(new ChequeService());
 
         }else if (id == R.id.nav_Pawning_service){
 

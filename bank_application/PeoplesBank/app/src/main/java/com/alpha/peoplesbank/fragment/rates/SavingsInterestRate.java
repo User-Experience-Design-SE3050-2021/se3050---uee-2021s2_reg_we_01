@@ -2,6 +2,7 @@ package com.alpha.peoplesbank.fragment.rates;
 
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,6 +47,20 @@ public class SavingsInterestRate extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(savingAdapter);
+
+        InterestRatesForDeposits paymentService = new InterestRatesForDeposits();
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+
+            @Override
+            public void handleOnBackPressed() {
+                // Handle the back button event
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, paymentService).commit();
+            }
+        };
+
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), callback);
+
         return view;
     }
 }

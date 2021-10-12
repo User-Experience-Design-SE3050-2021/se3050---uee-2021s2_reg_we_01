@@ -46,12 +46,7 @@ public class PaymentService extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, paymentHistory).commit();
             }
         });
-        chequeService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, chequeServices).commit();
-            }
-        });
+
         return view;
     }
 }

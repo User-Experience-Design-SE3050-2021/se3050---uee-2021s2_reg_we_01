@@ -73,7 +73,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:background="@drawable/money_transfer" />
+                        android:background="@drawable/rate_02" />
 
 
 
@@ -129,7 +129,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:background="@drawable/inter_branch" />
+                        android:background="@drawable/loan_service" />
 
 
 
